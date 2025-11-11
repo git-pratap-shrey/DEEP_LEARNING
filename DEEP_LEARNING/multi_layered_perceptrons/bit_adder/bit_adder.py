@@ -3,7 +3,7 @@
     that is to say that a single perceptron, for example can represent a single NAND gate, which is universal for
     all boolean functions (-2, -2 weight, 3 bias), but the difference btw them arises by a neural network's ability to 
     learn to create a bit_adder ckt. with just inputs and outputs, 
-    like a circuit that is does not require human intervention, but can configure on its own based on 'learning'.
+    like a circuit that does not require human intervention, but can configure on its own based on 'learning'.
 """
 
 import numpy as np
@@ -103,4 +103,5 @@ for i in range(4):
     output = sigmoid(np.dot(sigmoid(np.dot(input_pair, W1) + b1), W2) + b2)
     # binary_output = (output > 0.5).astype(int)
     print(f"Input: {input_pair}, Predicted: {output}, Expected: {y[i]}")
+
 
